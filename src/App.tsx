@@ -162,6 +162,35 @@ function App() {
               className="panel"
             >
               <div className="setup-container">
+                {/* Roles Column */}
+                <div>
+                  <h2 className="flex-row mb-1">
+                    <Settings /> Roles Deck
+                  </h2>
+                  <div
+                    style={{
+                      display: "flex",
+                      gap: "0.5rem",
+                      flexWrap: "wrap",
+                      marginBottom: "1rem",
+                    }}
+                  >
+                    {PRESET_ROLES.map((role) => (
+                      <button
+                        key={"preset-" + role.id}
+                        className={`role-btn ${role.team}`}
+                        onClick={() => addRoleToDeck(role)}
+                        style={{
+                          padding: "0.4rem 0.8rem",
+                          fontSize: "0.85rem",
+                        }}
+                      >
+                        + {role.name}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
                 {/* Setup Instructions Column */}
                 <div>
                   <h2 className="flex-row mb-1">
@@ -184,36 +213,11 @@ function App() {
                       <Play size={18} /> Start Game
                     </button>
                   </div>
-                </div>
 
-                {/* Roles Column */}
-                <div>
-                  <h2 className="flex-row mb-1">
-                    <Settings /> Roles Deck
-                  </h2>
                   <div
-                    style={{
-                      display: "flex",
-                      gap: "0.5rem",
-                      flexWrap: "wrap",
-                      marginBottom: "1rem",
-                    }}
+                    className="list-container"
+                    style={{ maxHeight: "400px", marginTop: "1rem" }}
                   >
-                    {PRESET_ROLES.map((role) => (
-                      <button
-                        key={"preset-" + role.id}
-                        onClick={() => addRoleToDeck(role)}
-                        style={{
-                          padding: "0.4rem 0.8rem",
-                          fontSize: "0.85rem",
-                        }}
-                      >
-                        + {role.name}
-                      </button>
-                    ))}
-                  </div>
-
-                  <div className="list-container">
                     <AnimatePresence>
                       {roleDeck.map((r, i) => (
                         <motion.div

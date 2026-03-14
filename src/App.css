@@ -137,7 +137,15 @@
 
 .role-badge.villager { color: var(--team-villager); border-color: rgba(100, 181, 246, 0.3); }
 .role-badge.werewolf { color: var(--team-werewolf); border-color: rgba(255, 82, 82, 0.3); }
-.role-badge.solo { color: var(--team-solo); border-color: rgba(255, 213, 79, 0.3); }
+.role-badge.solo { color: var(--team-solo); border-color: rgba(76, 175, 80, 0.3); }
+
+.role-btn.villager { color: var(--team-villager); border-color: rgba(100, 181, 246, 0.3); }
+.role-btn.werewolf { color: var(--team-werewolf); border-color: rgba(255, 82, 82, 0.3); }
+.role-btn.solo { color: var(--team-solo); border-color: rgba(76, 175, 80, 0.3); }
+
+.role-btn.villager:hover { background: rgba(100, 181, 246, 0.1); }
+.role-btn.werewolf:hover { background: rgba(255, 82, 82, 0.1); }
+.role-btn.solo:hover { background: rgba(76, 175, 80, 0.1); }
 
 .player-actions {
   display: flex;
